@@ -17,14 +17,14 @@
         </thead>
         <tbody>
             {% for todo_item in todo_items %}
-            <tr>
-                <th>{{forloop.counter}}</th>
-                <th>{{todo_item.name}}</th>
-                <th>{{todo_item.description}}</th>
-                <th>{{todo_item.get_priority_display}}</th>
-                <th>{{todo_item.get_status_display}}</th>
-                <th>{{todo_item.created_at}}</th>
-                <th>{{todo_item.finish_time}}</th>
+            <tr class="{{todo_item.priority}}">
+                <td>{{forloop.counter}}</td>
+                <td>{{todo_item.name}}</td>
+                <td>{{todo_item.description}}</td>
+                <td>{{todo_item.get_priority_display}}</td>
+                <td>{{todo_item.get_status_display}}</td>
+                <td>{{todo_item.created_at}}</td>
+                <td>{{todo_item.finish_time}}</td>
             </tr>
             {% endfor %}
         </tbody>
